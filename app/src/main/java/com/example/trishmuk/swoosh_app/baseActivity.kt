@@ -1,0 +1,44 @@
+package com.example.trishmuk.swoosh_app
+
+import android.support.v7.app.AppCompatActivity
+import android.os.Bundle
+import android.util.Log
+
+open class baseActivity : AppCompatActivity() {
+    val TAG = "LifeCycle"
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        Log.i(TAG, "${javaClass.simpleName} onCreate()")
+        super.onCreate(savedInstanceState)
+    }
+
+    override fun onStart() {
+        Log.i(TAG, "${javaClass.simpleName} onStart()")
+        super.onStart()
+    }
+
+    override fun onResume() {
+        Log.i(TAG, "${javaClass.simpleName} onResume()")
+        super.onResume()
+    }
+
+    override fun onRestart() {
+        Log.i(TAG, "${javaClass.simpleName} onRestart()")
+        super.onRestart()
+    }
+
+    override fun onPause() {
+        Log.i(TAG, "${javaClass.simpleName} onPause()")
+        super.onPause()
+    }
+
+    override fun onStop() {
+        Log.i(TAG, "${javaClass.simpleName} onStop()")
+        super.onStop()
+    }
+
+    override fun onDestroy() {
+        Log.i(TAG, "${javaClass.simpleName} onDestroy()")
+        super.onDestroy()
+    }
+}

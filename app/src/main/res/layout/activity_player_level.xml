@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".League">
+    tools:context=".PlayerLevel">
+
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/levelBg"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
@@ -15,7 +16,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/desiredleaguebg" />
+        app:srcCompat="@drawable/beginnerballerbg" />
+
     <ImageView
         android:id="@+id/logoView"
         android:layout_width="120dp"
@@ -28,16 +30,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/swooshlogo" />
-
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/levelText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/montaga"
-        android:text="Desired League:"
+        android:text="I am a:"
         android:textColor="@color/colorAccent"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/logoView"
@@ -45,63 +46,49 @@
         app:layout_constraintTop_toBottomOf="@+id/logoView" />
 
     <LinearLayout
-        android:id="@+id/choiceLeague"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="368dp"
+        android:layout_height="73dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:orientation="vertical"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5">
+        app:layout_constraintTop_toBottomOf="@+id/levelText">
 
         <ToggleButton
-            android:id="@+id/menButton"
-            android:layout_width="match_parent"
+            android:id="@+id/Beginner"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
             android:background="@drawable/swoosh_togglecheck"
+            android:capitalize="none"
             android:fontFamily="@font/montaga"
-            android:text="Men"
-            android:textAlignment="center"
+            android:text="Beginner"
             android:textColor="@android:color/white"
-            android:textOff="Men"
-            android:textOn="Men"
+            android:textOff="Beginner"
+            android:textOn="Beginner"
             android:textSize="18sp" />
 
         <ToggleButton
-            android:id="@+id/womenButton"
-            android:layout_width="match_parent"
+            android:id="@+id/BallerButton"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="1"
             android:background="@drawable/swoosh_togglecheck"
+            android:capitalize="none"
             android:fontFamily="@font/montaga"
-            android:text="Women"
-            android:textAlignment="center"
+            android:text="Baller"
             android:textColor="@android:color/white"
-            android:textOff="Women"
-            android:textOn="Women"
+            android:textOff="Baller"
+            android:textOn="Baller"
             android:textSize="18sp" />
-
-        <ToggleButton
-            android:id="@+id/Co_Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/swoosh_togglecheck"
-            android:fontFamily="@font/montaga"
-            android:text="CO-ED"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textOff="CO-ED"
-            android:textOn="CO-ED"
-            android:textSize="18sp"
-            tools:layout_editor_absoluteX="148dp"
-            tools:layout_editor_absoluteY="186dp" />
     </LinearLayout>
 
     <Button
-        android:id="@+id/Leaguebutton"
+        android:id="@+id/FinishButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -109,12 +96,11 @@
         android:layout_marginStart="8dp"
         android:background="@drawable/swoosh_button"
         android:fontFamily="@font/montaga"
-        android:onClick="leagueSelected"
-        android:text="Next"
+        android:text="Finish"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/levelBg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
