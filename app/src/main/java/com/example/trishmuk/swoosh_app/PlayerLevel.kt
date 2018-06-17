@@ -28,5 +28,5 @@ class PlayerLevel : baseActivity() {
         player_level = "Baller"
     }
 
-    
+
 }
