@@ -23,7 +23,8 @@
 
         <activity android:name=".League" />
         <activity android:name=".baseActivity" />
-        <activity android:name=".PlayerLevel"></activity>
+        <activity android:name=".PlayerLevel" />
+        <activity android:name=".FinalActivity"></activity>
     </application>
 
 </manifest>

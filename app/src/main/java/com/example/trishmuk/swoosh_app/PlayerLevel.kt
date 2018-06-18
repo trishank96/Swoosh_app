@@ -28,5 +28,10 @@ class PlayerLevel : baseActivity() {
         player_level = "Baller"
     }
 
-
+    fun finishBut(view: View){
+        val tofinal = Intent(this, FinalActivity::class.java)
+        tofinal.putExtra(LEAGUE_SELECTED, league)
+        tofinal.putExtra(SKILL_LEVEL, player_level)
+        startActivity(tofinal)
+    }
 }
