@@ -11,11 +11,24 @@ import kotlinx.android.synthetic.main.activity_player_level.*
 class PlayerLevel : baseActivity() {
 
     var player = Player("","")
+
+    override fun onSaveInstanceState(outState: Bundle?) {
+        super.onSaveInstanceState(outState)
+        outState?.putParcelable(PLAYER_INST, player)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_player_level)
         player = intent.getParcelableExtra(PLAYER_INST)
 
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+        super.onRestoreInstanceState(savedInstanceState)
+        if (savedInstanceState != null){
+            player = savedInstanceState.getParcelable(PLAYER_INST)
+        }
     }
 
     fun beginnerLevel (view: View){

@@ -67,6 +67,7 @@
         android:background="@drawable/swoosh_button"
         android:fontFamily="@font/montaga"
         android:text="Get Started"
+        android:onClick="onEntry"
         android:textColor="@color/colorAccent"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/bgView"

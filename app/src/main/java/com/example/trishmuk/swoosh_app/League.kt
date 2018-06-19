@@ -11,9 +11,22 @@ import kotlinx.android.synthetic.main.activity_league.*
 class League : baseActivity() {
 
      var player = Player("","")
+
+    override fun onSaveInstanceState(outState: Bundle?) {
+        super.onSaveInstanceState(outState)
+        outState?.putParcelable(PLAYER_INST, player)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_league)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+        super.onRestoreInstanceState(savedInstanceState)
+        if (savedInstanceState != null){
+            player = savedInstanceState.getParcelable(PLAYER_INST)
+        }
     }
 
     fun mensSelected (view: View){
